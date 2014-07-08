@@ -1,0 +1,31 @@
+
+======= Installing Job Server =======
+yum install gearmand
+
+======= Compiling from source =======
+tar xzf gearmand-X.Y.tar.gz
+cd gearmand-X.Y
+./configure
+make
+make install
+
+
+======= starting =======
+ gearmand -d
+ 
+ 
+======= install gearman client  PHP extension. =======
+yum install gearman-php OR compile from PECL
+
+tar xzf gearman-X.Y.tgz
+cd gearman-X.Y
+phpize
+./configure
+make
+make install
+
+VI  /etc/php
+extension="gearman.so"
+
+ 
+======= EDIT WORKER.PHP AND CLIENT.PHP =======
